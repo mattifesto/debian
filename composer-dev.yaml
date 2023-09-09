@@ -1,0 +1,13 @@
+services:
+
+
+  debian:
+    build:
+      context: .
+      target: development
+    init: true
+    restart: always
+    volumes:
+    - type: bind
+      source: /var/run/docker.sock
+      target: /var/run/docker.sock
